@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Grid, ExampleBlock, Text, Container } from "@nextui-org/react";
 import Subscribe from "./subscribe";
+import { ThemeContext } from "../state/ThemeContext";
 
 const Homepage = () => {
   const [style, setStyle] = useState({ display: "none" });
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <Container>
       <Grid.Container gap={2} justify="center">
-        <Grid xs={12} md={9} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={12}
+          md={9}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -50,10 +57,18 @@ const Homepage = () => {
             </a>
           </Container>
         </Grid>
-        <Grid xs={0} md={3} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={0}
+          md={3}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Subscribe />
         </Grid>
-        <Grid xs={6} md={3} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={6}
+          md={3}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -80,7 +95,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={6} md={3} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={6}
+          md={3}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -107,7 +126,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={6} md={3} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={6}
+          md={3}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -134,7 +157,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={6} md={3} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={6}
+          md={3}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -161,7 +188,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={13} md={6} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={13}
+          md={6}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -188,7 +219,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={12} md={6} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={12}
+          md={6}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Container
             className="bg-faded-image"
             style={{
@@ -215,7 +250,11 @@ const Homepage = () => {
             </Container>
           </Container>
         </Grid>
-        <Grid xs={12} md={0} style={{ background: "#F5F5F5" }}>
+        <Grid
+          xs={12}
+          md={0}
+          style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
+        >
           <Subscribe />
         </Grid>
       </Grid.Container>

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import React, { useContext, useReducer } from "react";
+import { ThemeContext } from "../state/ThemeContext";
 import {
   Container,
   Button,
@@ -14,12 +16,26 @@ import {
 import Homepage from "../components/Homepage";
 
 export default function Home() {
+  const theme = useContext(ThemeContext);
+
+  const darkMode = theme.state.darkMode;
+
   return (
-    <div className={styles.container}>
+    <div
+      className={{
+        ...styles.container,
+        background: `${darkMode ? "black" : "#F5F5F5"}`,
+      }}
+    >
       <Container fluid>
         <Container justify="center" align="center">
           <Tooltip text={"Hi! There"} position="top" color="primary">
-            <Text h1 b style={{ fontFamily: "Ephesis, cursive" }}>
+            <Text
+              h1
+              b
+              style={{ fontFamily: "Ephesis, cursive" }}
+              color={darkMode ? "white" : "black"}
+            >
               Bubble
             </Text>
           </Tooltip>
