@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { CssBaseline } from "@nextui-org/react";
+import { Container, CssBaseline, Text } from "@nextui-org/react";
 
 import Navbar from "../components/Navbar";
 
@@ -9,6 +9,16 @@ function MyApp({ Component, pageProps }) {
       <CssBaseline />
       <Navbar />
       <Component {...pageProps} />
+      <Container
+        fluid
+        justify="center"
+        align="center"
+        style={{ margin: "20px" }}
+      >
+        <Text b h6 color="grey">
+          Copyright © 2021 Jayesh Bhade. All rights reserved.
+        </Text>
+      </Container>
     </>
   );
 }

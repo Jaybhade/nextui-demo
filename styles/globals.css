@@ -16,3 +16,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bg-faded-image {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
