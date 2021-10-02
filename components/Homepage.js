@@ -8,11 +8,11 @@ const Homepage = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <Container>
+    <div>
       <Grid.Container gap={2} justify="center">
         <Grid
-          xs={12}
-          md={9}
+          xs={11}
+          md={8.5}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
           <Container
@@ -65,8 +65,8 @@ const Homepage = () => {
           <Subscribe />
         </Grid>
         <Grid
-          xs={6}
-          md={3}
+          xs={5.5}
+          md={2.5}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
           <Container
@@ -96,7 +96,7 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={6}
+          xs={5.5}
           md={3}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
@@ -127,7 +127,7 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={6}
+          xs={5.5}
           md={3}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
@@ -158,7 +158,7 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={6}
+          xs={5.5}
           md={3}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
@@ -189,8 +189,8 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={13}
-          md={6}
+          xs={11}
+          md={5.5}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
           <Container
@@ -220,7 +220,7 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={12}
+          xs={11}
           md={6}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
@@ -251,14 +251,14 @@ const Homepage = () => {
           </Container>
         </Grid>
         <Grid
-          xs={12}
+          xs={11}
           md={0}
           style={{ background: `${darkMode ? "black" : "#F5F5F5"}` }}
         >
           <Subscribe />
         </Grid>
       </Grid.Container>
-    </Container>
+    </div>
   );
 };
 

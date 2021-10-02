@@ -27,8 +27,14 @@ export default function Home() {
         background: `${darkMode ? "black" : "#F5F5F5"}`,
       }}
     >
-      <Container fluid>
-        <Container justify="center" align="center">
+      <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Tooltip text={"Hi! There"} position="top" color="primary">
             <Text
               h1
@@ -39,8 +45,8 @@ export default function Home() {
               Bubble
             </Text>
           </Tooltip>
-        </Container>
-      </Container>
+        </div>
+      </div>
       <Homepage />
     </div>
   );

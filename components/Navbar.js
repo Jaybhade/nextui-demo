@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div style={{ background: `${darkMode ? "black" : "white"}` }}>
-      <Container fluid direction="row">
+      <div>
         <Row justify="center" align="center">
           <Text style={{ margin: "10px" }} color={darkMode ? "white" : "black"}>
             Home
@@ -44,7 +44,7 @@ const Navbar = () => {
           <Text>Random</Text>
         </Grid>
       </Grid.Container> */}
-      </Container>
+      </div>
     </div>
   );
 };

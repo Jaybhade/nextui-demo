@@ -10,8 +10,8 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <ThemeProvider>
+        <CssBaseline />
         <Wrapper>
-          <CssBaseline />
           <Navbar />
           <Component {...pageProps} />
           <div
